@@ -1,8 +1,3 @@
-
----
-title: VODUM Docs
----
-
 <div align="left">
 
 # 🧩 VODUM Documentation
@@ -11,40 +6,40 @@ title: VODUM Docs
 
 <br><br>
 
-VODUM est une application web pensée pour **administrer proprement des utilisateurs**, leurs **abonnements**, et leurs **droits d’accès** sur des serveurs **Plex** (et Jellyfin, selon configuration / roadmap).
+VODUM is a web application designed to **properly manage users**, their **subscriptions**, and their **access rights** on **Plex** servers (and Jellyfin depending on configuration / roadmap).
 
-> **Objectif :** te donner une vue claire de ton parc (utilisateurs/serveurs/bibliothèques), automatiser les échéances, et garder un historique exploitable.
+> **Goal:** provide a clear overview of your environment (users/servers/libraries), automate expiration handling, and maintain a reliable operational history.
 
 <div class="two-col">
   <div class="card">
 
-## 🚀 Démarrage rapide
+## 🚀 Quick Start
 
-1. Installer (Docker recommandé)  
-2. Ouvrir l’UI et terminer l’assistant (admin)  
-3. Ajouter tes serveurs (Plex/Jellyfin)  
-4. Synchroniser les utilisateurs / bibliothèques  
-5. Configurer abonnements + policies  
-6. Laisser les **Tasks** faire le boulot
+1. Install VODUM (Docker recommended)  
+2. Open the UI and complete the admin setup wizard  
+3. Add your servers (Plex/Jellyfin)  
+4. Synchronize users and libraries  
+5. Configure subscriptions and policies  
+6. Let **Tasks** handle automation
 
-➡️ Commence par : **[Getting started](getting-started.md)**
+➡️ Start here: **[Getting started](getting-started.md)**
 
   </div>
   <div class="card">
 
 ## 🧭 Navigation
 
-- **[Dashboard](dashboard.md)** : vue globale (état, stats, derniers logs)
-- **[Monitoring](monitoring.md)** : état temps réel par onglets (Policies/Activity/History/Users/Libraries/Servers)
-- **[Users](users.md)** : gestion utilisateurs + recherche multi-champs
-- **[Subscriptions](subscriptions.md)** : dates, cadeaux, historique
-- **[Policies](policies.md)** : warning / disable sur expiration
-- **[Servers](servers.md)** & **[Libraries](libraries.md)** : intégrations & partages
-- **[Tasks](tasks.md)** : cron/scheduler + exécutions
-- **[Mailing](mailing.md)** : SMTP, templates, campagnes, historique
-- **[Discord](discord.md)** : bot, templates, campagnes, historique
-- **[Backup](backup.md)** : sauvegarde / restauration DB
-- **[Logs](logs.md)** : logs applicatifs & tâches
+- **[Dashboard](dashboard.md)** — Global overview (status, statistics, latest logs)
+- **[Monitoring](monitoring.md)** — Real-time system state (Policies / Activity / History / Users / Libraries / Servers)
+- **[Users](users.md)** — User management with advanced multi-field search
+- **[Subscriptions](subscriptions.md)** — Expiration dates, gift handling, history tracking
+- **[Policies](policies.md)** — Warning and automatic disable on expiration
+- **[Servers](servers.md)** & **[Libraries](libraries.md)** — Server integrations and library sharing
+- **[Tasks](tasks.md)** — Scheduler / cron automation and executions
+- **[Mailing](mailing.md)** — SMTP configuration, templates, campaigns, history
+- **[Discord](discord.md)** — Bot integration, templates, campaigns, history
+- **[Backup](backup.md)** — Database backup and restore
+- **[Logs](logs.md)** — Application and task logs
 
   </div>
 </div>
@@ -53,9 +48,9 @@ VODUM est une application web pensée pour **administrer proprement des utilisat
 
 ## 🧰 Support & Issues
 
-Si tu rencontres un bug ou veux proposer une amélioration :
+If you encounter a bug or would like to suggest an improvement:
 
-- 📌 GitHub Issues : **https://github.com/Nexius2/VODUM/issues**
-- 🧾 Avant d’ouvrir une issue : passe par **[Troubleshooting](troubleshooting.md)**
+- 📌 GitHub Issues: **https://github.com/Nexius2/VODUM/issues**
+- 🧾 Before opening an issue, please check **[Troubleshooting](troubleshooting.md)**
 
 </div>
