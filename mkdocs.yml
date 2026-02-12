@@ -1,9 +1,14 @@
 
 site_name: VODUM Docs
 site_description: Official documentation for VODUM (Plex/Jellyfin user & subscription management)
+site_url: https://nexius2.github.io/vodum-docs/
+use_directory_urls: true
+
 repo_name: Nexius2/VODUM
 repo_url: https://github.com/Nexius2/VODUM
 edit_uri: edit/main/docs/
+
+
 
 theme:
   name: material
