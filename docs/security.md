@@ -1,41 +1,38 @@
----
-title: 🔐 Security
----
+# Security
 
-<!-- Auto-generated improved docs for GitHub Pages (MkDocs Material) -->
+## Network access
 
-<div align="left">
+```env
+VODUM_IP_FILTER=1
+VODUM_ALLOWED_NETS=127.0.0.1/32,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16
+```
 
-# 🔐 Security
+Behind a reverse proxy, enable forwarded-header trust only for its network:
 
-<span class="hint-badge">IP filter • Secrets • Tokens • Best practices</span>
+```env
+VODUM_TRUST_PROXY=1
+VODUM_TRUSTED_PROXY_NETS=127.0.0.1/32,::1/128,172.18.0.0/16
+```
 
-<br><br>
+Use HTTPS, a firewall and the narrowest possible CIDRs.
 
-</div>
+## Web protections
 
+VODUM requires administrator authentication, rate-limits failed logins, rejects
+unsafe external `next` redirects and applies CSRF validation to POST/PUT/PATCH/
+DELETE requests. Cookies are HttpOnly; SameSite and Secure are configurable.
 
-## IP filtering
+## Secrets and backups
 
-Use:
+SMTP passwords, Discord tokens and provider tokens are encrypted in SQLite.
+The persistent key defaults to `/appdata/vodum.encryption_key` and may be changed
+with `VODUM_ENCRYPTION_KEY_FILE` or supplied using `VODUM_ENCRYPTION_KEY`.
 
-- `VODUM_IP_FILTER=1`
-- `VODUM_ALLOWED_NETS=...`
+Full ZIP backups contain the key and encrypted values. Raw databases do not.
+Treat both logs and backups as sensitive.
 
-to restrict access to trusted networks.
+## Upload limits
 
----
-
-## Secrets and tokens
-
-- Plex tokens / Jellyfin API keys should never be exposed publicly.
-- Use strong admin credentials.
-- Keep `VODUM_SECRET_KEY` private (required for secure sessions).
-
----
-
-## Recommended deployment
-
-- Put VODUM behind a reverse proxy (HTTPS)
-- Restrict access by IP whenever possible
-- Do not expose VODUM publicly without authentication + firewall
+`VODUM_MAX_UPLOAD_MB`, `VODUM_MAX_ZIP_EXTRACTED_MB` and
+`VODUM_MAX_ZIP_MEMBERS` bound requests and restored archives. A reverse proxy
+must allow the desired request size too.
