@@ -27,3 +27,18 @@ configured data directories are persistent and writable.
 Additional security overrides include `VODUM_SECRET_KEY`,
 `VODUM_ENCRYPTION_KEY`, cookie settings and authentication rate-limit values.
 Prefer persistent generated keys over inline secrets when possible.
+
+## Response-time diagnostics
+
+Optional route, SQLite, provider/cache, HTTP-worker and supported media-job queue
+timings are described in [Performance](performance.md), including their limits
+and the CSV reporting commands. They are deployment environment settings and
+require a process restart to take effect.
+
+## Separate administrator hostname
+
+When administration and the public portal use different virtual hosts, set the
+explicit administrator URL/host (`VODUM_ADMIN_PUBLIC_URL` or
+`VODUM_ADMIN_PUBLIC_HOST`) alongside the portal public URL. With one shared host,
+role/session controls still separate administration and the portal. Hostnames do
+not replace permission checks or a correctly restricted reverse proxy.
